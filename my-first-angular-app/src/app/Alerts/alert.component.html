@@ -1,0 +1,23 @@
+<h5>Assignment #2</h5>
+<input type="text" 
+class="form-control"
+[(ngModel)]="username">
+
+<p>{{ username }}</p>
+
+<button 
+    class="btn btn-default" 
+    [disabled]="checkUsername()"
+    (click)="username = ''">Reset User</button>
+
+<hr>
+
+<h5>Assignment #3</h5>
+
+<button
+    (click)="logClick()">Display Details</button>
+
+<p *ngIf="toggle">Secret Password = tuna</p>
+<div *ngFor="let click of clickArray; let i = index"
+    [ngStyle]="{backgroundColor: i > 4 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': i > 4}">{{ click }}</div>
